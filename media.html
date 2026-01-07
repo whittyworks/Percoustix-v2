@@ -5,6 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media - Percoustix</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .poster {
+      position: relative;
+    }
+    .video-links {
+      position: absolute;
+      top: 28%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+      z-index: 10;
+    }
+    .video-links a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.7);
+      border: 1px solid rgba(47,211,255,0.6);
+      border-radius: 8px;
+      color: #2fd3ff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+    }
+    .video-links a:hover {
+      background: rgba(47,211,255,0.3);
+      border-color: #2fd3ff;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .video-links {
+        top: 25%;
+        gap: 10px;
+        padding: 10px;
+      }
+      .video-links a {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="nav"><div class="nav-container">
@@ -15,8 +59,17 @@
     <a href="media.html" class="active">Media</a>
     <a href="contact.html">Contact Us</a>
   </div></nav>
-  <main><div class="poster">
-    <img src="assets/img/media.png" alt="Media - Percoustix">
-  </div></main>
+  <main>
+    <div class="poster">
+      <img src="assets/img/media.png" alt="Media - Percoustix">
+      <div class="video-links">
+        <a href="https://www.instagram.com/percoustix/reel/DRNPkbXkXro/" target="_blank">Watch Video</a>
+        <a href="https://www.instagram.com/percoustix/reel/C0Xgrq0OzLX/" target="_blank">Watch Video</a>
+        <a href="https://www.instagram.com/percoustix/reel/DR2ex6kEXrW/" target="_blank">Watch Video</a>
+        <a href="https://www.instagram.com/percoustix/reel/C0RmcOEuzLM/" target="_blank">Watch Video</a>
+        <a href="https://www.instagram.com/percoustix/reel/DR4ygkbkR5b/" target="_blank">Watch Video</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

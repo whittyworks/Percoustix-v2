@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join the Band - Percoustix</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .poster {
+      position: relative;
+    }
+    .cta-link {
+      position: absolute;
+      top: 41%;
+      left: 77%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+    .cta-link a {
+      display: inline-block;
+      padding: 16px 36px;
+      background: rgba(0,0,0,0.8);
+      border: 2px solid #2fd3ff;
+      border-radius: 10px;
+      color: #2fd3ff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+    .cta-link a:hover {
+      background: #2fd3ff;
+      color: #000;
+    }
+    @media (max-width: 768px) {
+      .cta-link a {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="nav"><div class="nav-container">
@@ -15,8 +51,13 @@
     <a href="media.html">Media</a>
     <a href="contact.html">Contact Us</a>
   </div></nav>
-  <main><div class="poster">
-    <img src="assets/img/band.png" alt="Join the Band - Percoustix">
-  </div></main>
+  <main>
+    <div class="poster">
+      <img src="assets/img/band.png" alt="Join the Band - Percoustix">
+      <div class="cta-link">
+        <a href="https://get.percoustix.com/" target="_blank">Get Percoustix</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
