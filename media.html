@@ -6,54 +6,56 @@
   <title>Media - Percoustix</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .poster {
-      position: relative;
-    }
-    .video-links {
+    .poster { position: relative; }
+    .video-thumbs {
       position: absolute;
-      top: 28%;
+      top: 18%;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
-      padding: 20px;
+      gap: 12px;
+      padding: 10px;
       z-index: 10;
+      max-width: 1400px;
     }
-    .video-links a {
-      display: inline-block;
-      padding: 10px 20px;
-      background: rgba(0,0,0,0.7);
-      border: 1px solid rgba(47,211,255,0.6);
-      border-radius: 8px;
-      color: #2fd3ff;
-      text-decoration: none;
-      font-size: 0.85rem;
+    .video-thumbs a {
+      display: block;
+      width: 240px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid rgba(47,211,255,0.5);
       transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
-    .video-links a:hover {
-      background: rgba(47,211,255,0.3);
+    .video-thumbs a:hover {
+      transform: scale(1.08);
       border-color: #2fd3ff;
-      color: #fff;
+      box-shadow: 0 6px 25px rgba(47,211,255,0.4);
+    }
+    .video-thumbs img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     @media (max-width: 768px) {
-      .video-links {
-        top: 25%;
-        gap: 10px;
-        padding: 10px;
+      .video-thumbs {
+        top: 15%;
+        gap: 8px;
+        max-width: 95%;
       }
-      .video-links a {
-        padding: 8px 14px;
-        font-size: 0.75rem;
+      .video-thumbs a {
+        width: 160px;
       }
     }
   </style>
 </head>
 <body>
   <nav class="nav"><div class="nav-container">
-    <a href="index.html">Home</a>
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Percoustix Home"></a>
     <a href="how-it-works.html">How It Works</a>
+    <a href="https://get.percoustix.com/" target="_blank">Get Percoustix</a>
     <a href="our-story.html">Our Story</a>
     <a href="join-the-band.html">Join the Band</a>
     <a href="media.html" class="active">Media</a>
@@ -62,14 +64,17 @@
   <main>
     <div class="poster">
       <img src="assets/img/media.png" alt="Media - Percoustix">
-      <div class="video-links">
-        <a href="https://www.instagram.com/percoustix/reel/DRNPkbXkXro/" target="_blank">Watch Video</a>
-        <a href="https://www.instagram.com/percoustix/reel/C0Xgrq0OzLX/" target="_blank">Watch Video</a>
-        <a href="https://www.instagram.com/percoustix/reel/DR2ex6kEXrW/" target="_blank">Watch Video</a>
-        <a href="https://www.instagram.com/percoustix/reel/C0RmcOEuzLM/" target="_blank">Watch Video</a>
-        <a href="https://www.instagram.com/percoustix/reel/DR4ygkbkR5b/" target="_blank">Watch Video</a>
+      <div class="video-thumbs">
+        <a href="https://www.instagram.com/percoustix/reel/DRNPkbXkXro/" target="_blank"><img src="video_1.png" alt="Video 1"></a>
+        <a href="https://www.instagram.com/percoustix/reel/C0Xgrq0OzLX/" target="_blank"><img src="video_2.png" alt="Video 2"></a>
+        <a href="https://www.instagram.com/percoustix/reel/DR2ex6kEXrW/" target="_blank"><img src="video_3.png" alt="Video 3"></a>
+        <a href="https://www.instagram.com/percoustix/reel/C0RmcOEuzLM/" target="_blank"><img src="video_4.png" alt="Video 4"></a>
+        <a href="https://www.instagram.com/percoustix/reel/DR4ygkbkR5b/" target="_blank"><img src="video_5.png" alt="Video 5"></a>
       </div>
     </div>
   </main>
+  <nav class="bottom-nav">
+    <a href="https://get.percoustix.com/" target="_blank">Get Percoustix</a>
+  </nav>
 </body>
 </html>

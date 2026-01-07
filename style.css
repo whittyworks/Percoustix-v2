@@ -1,18 +1,31 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: #000; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
 
-.nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(47,211,255,0.2); z-index: 1000; padding: 1rem 2rem; }
-.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+.nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(47,211,255,0.2); z-index: 1000; padding: 0.75rem 2rem; }
+.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
 .nav a { color: #2fd3ff; text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; padding: 0.5rem 0.75rem; border-radius: 4px; transition: all 0.3s; }
 .nav a:hover, .nav a.active { background: rgba(47,211,255,0.1); color: #fff; }
 
-main { margin-top: 60px; }
+.nav-logo { display: flex; align-items: center; padding: 0 !important; }
+.nav-logo img { height: 40px; width: auto; transition: transform 0.3s; }
+.nav-logo:hover img { transform: scale(1.1); }
+.nav-logo:hover { background: transparent !important; }
+
+main { margin-top: 60px; margin-bottom: 60px; }
 .poster { max-width: 1200px; margin: 0 auto; }
 .poster img { width: 100%; height: auto; display: block; }
 
+/* Bottom nav bar */
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(47,211,255,0.2); z-index: 1000; padding: 0.75rem 2rem; text-align: center; }
+.bottom-nav a { display: inline-block; padding: 10px 30px; background: rgba(47,211,255,0.15); border: 1px solid #2fd3ff; border-radius: 8px; color: #2fd3ff; text-decoration: none; font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s; }
+.bottom-nav a:hover { background: #2fd3ff; color: #000; }
+
 @media (max-width: 768px) {
-  .nav { padding: 0.75rem 1rem; }
+  .nav { padding: 0.5rem 1rem; }
   .nav-container { gap: 0.4rem; }
   .nav a { font-size: 0.7rem; padding: 0.4rem 0.5rem; }
-  main { margin-top: 80px; }
+  .nav-logo img { height: 32px; }
+  main { margin-top: 70px; margin-bottom: 55px; }
+  .bottom-nav { padding: 0.5rem 1rem; }
+  .bottom-nav a { padding: 8px 20px; font-size: 0.8rem; }
 }
