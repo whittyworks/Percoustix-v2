@@ -266,7 +266,7 @@
             <div class="demo-panel-kicker">Sound Lab</div>
             <h2 class="demo-panel-title">Mix Your Sound</h2>
             <p class="demo-panel-body" id="demoBody">Tap the pads on the guitar to play drums. Tap the gold circle for guitar!</p>
-            <p class="demo-panel-hint"><strong>Keyboard:</strong> A/â† = Left pad, D/â†’ = Right pad, Space = Guitar</p>
+            <p class="demo-panel-hint"><strong>Keyboard:</strong> A/← = Left pad, D/→ = Right pad, Space = Guitar</p>
             
             <div class="sound-controls">
               <div class="sound-control-group">
@@ -463,8 +463,8 @@
     
     guitarSelect.addEventListener('change', function() { if (guitarPlaying) { stopGuitar(); startGuitar(); } });
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'ArrowLeft' || e.key === 'a') playDrum('left');
-      else if (e.key === 'ArrowRight' || e.key === 'd') playDrum('right');
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') playDrum('left');
+      else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') playDrum('right');
       else if (e.key === ' ') { e.preventDefault(); guitarPlaying ? stopGuitar() : startGuitar(); }
     });
     window.addEventListener('beforeunload', stopGuitar);
