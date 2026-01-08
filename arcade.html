@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tap the Pads · Percoustix Demo</title>
+  <title>Tap the Pads Â· Percoustix Demo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -20,9 +20,42 @@
         linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.85));
       min-height: 100vh;
     }
+    .nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    .nav-container {
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+    .nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+    .nav a:hover {
+      color: var(--cyan);
+    }
     .container { width: min(1100px, calc(100% - 44px)); margin: 0 auto; }
     .demo-hero {
-      padding: 100px 0 80px;
+      padding: 80px 0 80px;
       min-height: calc(100vh - 60px);
       display: flex;
       flex-direction: column;
@@ -52,7 +85,7 @@
     }
     @media (max-width: 980px) {
       .demo-layout { grid-template-columns: 1fr; }
-      .demo-hero { padding: 80px 0 60px; }
+      .demo-hero { padding: 60px 0 60px; }
     }
     .demo-stage {
       position: relative;
@@ -178,6 +211,17 @@
 </head>
 
 <body>
+  <nav class="nav"><div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Percoustix Home"></a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="https://get.percoustix.com/" target="_blank">Get Percoustix</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="join-the-band.html">Join the Band</a>
+    <a href="media.html">Media</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="arcade.html">Arcade</a>
+  </div></nav>
+  
   <section class="demo-hero">
     <div class="container">
       <h1 class="section-title-big">Tap the Pads</h1>
@@ -197,7 +241,7 @@
             <div class="demo-panel-kicker">Sound Lab</div>
             <h2 class="demo-panel-title">Mix Your Sound</h2>
             <p class="demo-panel-body" id="demoBody">Tap the pads on the guitar to play drums. Tap the gold circle for guitar!</p>
-            <p class="demo-panel-hint"><strong>Keyboard:</strong> A/← = Left pad, D/→ = Right pad, Space = Guitar</p>
+            <p class="demo-panel-hint"><strong>Keyboard:</strong> A/â† = Left pad, D/â†’ = Right pad, Space = Guitar</p>
             
             <div class="sound-controls">
               <div class="sound-control-group">
