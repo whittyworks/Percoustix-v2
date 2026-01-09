@@ -134,7 +134,7 @@
       border: 2px solid rgba(47,211,255,.6);
       cursor: pointer;
       padding: 0;
-      transition: all 0.3s ease;
+      transition: all 0.1s ease;
       box-shadow: 0 0 20px rgba(47,211,255,.4), 0 0 40px rgba(47,211,255,.2);
     }
     .hotspot::before {
@@ -446,7 +446,7 @@
       var soundName = padType === 'left' ? leftSelect.value : rightSelect.value;
       playDrumSound(soundName);
     }
-    function flash(el) { el.classList.add('is-active'); setTimeout(function() { el.classList.remove('is-active'); }, 200); }
+    function flash(el) { el.classList.add('is-active'); setTimeout(function() { el.classList.remove('is-active'); }, 50); }
     
     hotspots.forEach(function(hs) {
       hs.addEventListener('click', function(e) {
